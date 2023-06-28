@@ -1,4 +1,4 @@
-package com.xjm.processService.service;
+package com.xjm.spring.common.config.service;
 
 
 import java.util.List;
