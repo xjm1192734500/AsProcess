@@ -1,8 +1,8 @@
 package com.xjm.processService.service;
 
-import com.xjm.processService.annotation.TestProcessorV1;
+import com.xjm.processService.annotation.ServiceVersion;
 
-@TestProcessorV1(value = "Method", impl = Iservice.class)
+@ServiceVersion(impl = Iservice.class, getVersion = "v1")
 public abstract class ProService implements Iservice {
 
 

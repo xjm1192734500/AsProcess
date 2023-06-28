@@ -57,7 +57,7 @@ public class ProcessServiceVersionProcessIm extends AbstractProcessor {
     @Override
     public Set<String> getSupportedAnnotationTypes() {
         Set<String> ann = new HashSet<>();
-        ann.add("com.xjm.processService.annotation.TestProcessorV1");
+        ann.add("com.xjm.processService.annotation.ServiceVersion");
         return ann;
     }
 
@@ -80,7 +80,7 @@ public class ProcessServiceVersionProcessIm extends AbstractProcessor {
                 //获取注解
                 Set<? extends Element> elementsAnnotatedWith = roundEnv.getElementsAnnotatedWith(annotation);
                 for (Element element : elementsAnnotatedWith) {
-                    AnnotationMirror annotationMirror = AnnotationElUtil.checkGetAnnotationMirror(element, "com.backend.mp.douyin.common.executor.YangShiServiceVersion");
+                    AnnotationMirror annotationMirror = AnnotationElUtil.checkGetAnnotationMirror(element, "com.xjm.processService.annotation.ServiceVersion");
                     if (annotationMirror == null) {
                         return true;
                     }
@@ -279,9 +279,9 @@ public class ProcessServiceVersionProcessIm extends AbstractProcessor {
                 TypeElement componentTypeElement = elementUtils.getTypeElement("org.springframework.stereotype.Component");
                 Object getVersion = typeMirrorGemValueMap.get("getVersion").getAnnotationValue().getValue();
                 freeWork.setAnnotationEls(new ArrayList<>(Arrays.asList(new AnnotationEl("@Component"),
-                        new AnnotationEl("@YangShi(version  = \"" + getVersion.toString() + "\")"))));
+                        new AnnotationEl("@Version(version  = \"" + getVersion.toString() + "\")"))));
                 freeWork.getImportTypeNames().add("org.springframework.stereotype.Component");
-                freeWork.getImportTypeNames().add("com.backend.mp.douyin.common.executor.YangShi");
+                freeWork.getImportTypeNames().add("com.xjm.processService.annotation.Version");
 
 
                 freeWork.setName(className + "Impl___");
