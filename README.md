@@ -13,3 +13,14 @@ idea 下 增加编译配置添加远程调试
 在要编译期的代码打上要调试的断点即可
 ![image](https://github.com/xjm1192734500/AsProcess/assets/38807941/5a917ba7-6abd-421e-adba-ff1c3c881a76)
 
+这个就会在生成项目的target下
+![image](https://github.com/xjm1192734500/AsProcess/assets/38807941/7bf6e005-579c-4b26-87c4-837aeb8b157d)
+
+
+![image](https://github.com/xjm1192734500/AsProcess/assets/38807941/553d2fb3-febc-4f0c-89fd-60df2bd5c17f)
+
+
+
+
+
+## ---------------------------
